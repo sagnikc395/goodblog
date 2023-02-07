@@ -47,7 +47,7 @@ function App() {
             return (
               <ul>
                 <li>{genreObj.title}</li>
-                <li>{genreObj.rating}</li>
+                <li>{genreObj.rating}/5</li>
                 <li>
                   <a href={genreObj.href} target="_blank">
                     Link
