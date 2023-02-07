@@ -2,28 +2,27 @@ import { useState } from "react";
 import "./styles/index.css";
 
 const blogs = {
-  space: ["lolz1", "lolz2"],
-  economcis: ["lolz3", "lolz4"],
-  history: ["lolz5", "lolz6"],
+  space: [
+    { title: "Space Title #1", rating: "3.5", href: "#" },
+    { title: "Space Title #2", rating: "4", href: "#" },
+  ],
+  economcis: [
+    { title: "Economics Title #1", rating: "2.75", href: "#" },
+    { title: "Economics Title #2", rating: "4.5", href: "#" },
+  ],
+  history: [
+    { title: "History Title #1", rating: "3.75", href: "#" },
+    { title: "History Title #2", rating: "5", href: "#" },
+  ],
 };
 
-const blogGenre = Object.keys(blogs);
+const genreList = Object.keys(blogs);
 
 function App() {
-  const [blogItem, setBlogItem] = useState("");
+  const [genreItems, setGenreItem] = useState([]);
 
   function blogItemHandler(genre) {
-    //returns all the blog items for the given genre
-    const blogsArr = blogs[genre];
-    let result = "";
-    blogsArr.map((item) => (result += item + ";"));
-    setBlogItem(result);
-    //console.log("clicked");
-  }
-
-  function processBlogLists(blogItem) {
-    //split a blog by ; and return a array
-    return blogItem.split(";");
+    setGenreItem(blogs[genre]);
   }
 
   return (
@@ -33,7 +32,7 @@ function App() {
         Checkout my favourite blogs.Select a genre to get started.
       </p>
       <ul className="blog-list-genre">
-        {blogGenre.map((genre) => {
+        {genreList.map((genre) => {
           return (
             <li key={genre} onClick={() => blogItemHandler(genre)}>
               {genre}
@@ -43,11 +42,21 @@ function App() {
       </ul>
       <hr />
       <div className="blog-container">
-        <ul>
-          {processBlogLists(blogItem).map((item) => (
-            <li>{item}</li>
-          ))}
-        </ul>
+        <div>
+          {genreItems.map((genreObj) => {
+            return (
+              <ul>
+                <li>{genreObj.title}</li>
+                <li>{genreObj.rating}</li>
+                <li>
+                  <a href={genreObj.href} target="_blank">
+                    Link
+                  </a>
+                </li>
+              </ul>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
