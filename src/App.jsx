@@ -34,7 +34,11 @@ function App() {
       <ul className="blog-list-genre">
         {genreList.map((genre) => {
           return (
-            <li key={genre} onClick={() => blogItemHandler(genre)}>
+            <li
+              className="list-item-inline"
+              key={genre}
+              onClick={() => blogItemHandler(genre)}
+            >
               {genre}
             </li>
           );
@@ -45,12 +49,12 @@ function App() {
         <div>
           {genreItems.map((genreObj) => {
             return (
-              <ul>
-                <li>{genreObj.title}</li>
-                <li>{genreObj.rating}/5</li>
-                <li>
-                  <a href={genreObj.href} target="_blank">
-                    Link
+              <ul className="blogobj-items">
+                <li className="list-item-inline genreObj-heading">{genreObj.title}</li>
+                <li className="list-item-inline genreObj-rating">{genreObj.rating}/5</li>
+                <li className="list-item-inline genreObj-link">
+                  <a href={genreObj.href} target="_blank" className="blog-link">
+                    Read More ...
                   </a>
                 </li>
               </ul>
