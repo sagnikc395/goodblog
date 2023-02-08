@@ -12,8 +12,8 @@ const blogs = {
     },
   ],
   design: [
-    { title: "Economics Title #1", rating: "2.75", href: "#" },
-    { title: "Economics Title #2", rating: "4.5", href: "#" },
+    { title: "Good Design", rating: "4.8", href: "https://shud.in/posts/good-design/" },
+    { title: "Blame your Tools", rating: "5", href: "https://almonk.medium.com/blame-your-tools-6bb124b25c69/" },
   ],
   history: [
     { title: "History Title #1", rating: "3.75", href: "#" },

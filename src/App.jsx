@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h1 className='main-title'>good blogs =&gt; good life ☘️ </h1>
+      <h1 className='main-title'>good blogs lead to good life ☘️ </h1>
       <p className='main-title-description'>
         Checkout some of my favourite blogs. Select a genre to get started.
       </p>
