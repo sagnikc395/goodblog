@@ -12,12 +12,28 @@ const blogs = {
     },
   ],
   design: [
-    { title: "Good Design", rating: "4.8", href: "https://shud.in/posts/good-design/" },
-    { title: "Blame your Tools", rating: "5", href: "https://almonk.medium.com/blame-your-tools-6bb124b25c69/" },
+    {
+      title: "Good Design",
+      rating: "4.8",
+      href: "https://shud.in/posts/good-design/",
+    },
+    {
+      title: "Blame your Tools",
+      rating: "5",
+      href: "https://almonk.medium.com/blame-your-tools-6bb124b25c69/",
+    },
   ],
   history: [
-    { title: "History Title #1", rating: "3.75", href: "#" },
-    { title: "History Title #2", rating: "5", href: "#" },
+    {
+      title: "Digging at Vindolanda",
+      rating: "4",
+      href: "https://followinghadrian.com/2022/08/21/digging-at-vindolanda/",
+    },
+    {
+      title: "Visiting Kutna Hora Bone Church",
+      rating: "4.3",
+      href: "https://www.nomadicmatt.com/travel-blogs/unusual-place-of-the-month-kutna-hora-bone-church/",
+    },
   ],
 };
 export default blogs;
