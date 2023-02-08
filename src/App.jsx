@@ -26,16 +26,16 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1 className="main-title">goodblog</h1>
-      <p className="main-title-description">
-        Checkout my favourite blogs.Select a genre to get started.
+    <div className='App'>
+      <h1 className='main-title'>good blogs =&gt; good life ☘️ </h1>
+      <p className='main-title-description'>
+        Checkout some of my favourite blogs. Select a genre to get started.
       </p>
-      <ul className="blog-list-genre">
+      <ul className='blog-list-genre'>
         {genreList.map((genre) => {
           return (
             <li
-              className="list-item-inline"
+              className='list-item-inline'
               key={genre}
               onClick={() => blogItemHandler(genre)}
             >
@@ -45,22 +45,22 @@ function App() {
         })}
       </ul>
       <hr />
-      <div className="blog-container">
-        <div>
-          {genreItems.map((genreObj) => {
-            return (
-              <ul className="blogobj-items">
-                <li className="list-item-inline genreObj-heading">{genreObj.title}</li>
-                <li className="list-item-inline genreObj-rating">{genreObj.rating}/5</li>
-                <li className="list-item-inline genreObj-link">
-                  <a href={genreObj.href} target="_blank" className="blog-link">
-                    Read More ...
+      <div className='blog-container'>
+        {genreItems.map((genreObj) => {
+          return (
+            <div class="current-blog-container">
+              <ul className='blogobj-items'>
+                <li className='genreObj-heading'>{genreObj.title}</li>
+                <li className='genreObj-rating'>{genreObj.rating}/5</li>
+                <li className='genreObj-link'>
+                  <a href={genreObj.href} target='_blank' className='blog-link'>
+                    Read More
                   </a>
                 </li>
               </ul>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

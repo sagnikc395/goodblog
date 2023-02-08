@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;700&display=swap");
+
+:root {
+    --border-color: #404040;
+    --primary-link: #f97316;
+}
+
+
+.App {
+  background-color: #fed7aa;
+  padding: 1rem 2rem;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  height: 100vh;
+  border: 0.5rem solid var(--border-color);
+  border-radius: 2rem;
+}
+
+.main-title {
+    font-size: 2rem;
+}
+
+.main-title-description{
+    font-size: 1.2rem;
+}
+
+.blog-list-genre {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.list-item-inline {
+    padding: 1rem 1.4rem;
+    border: 0.2rem solid var(--border-color);
+    border-radius: 0.8rem;
+    font-weight: 1rem;
+}
+
+.blog-container {
+    padding: 2rem 2rem;
+}
+
+.current-blog-container {
+    margin: 0.8rem;
+    border: 0.2rem solid var(--border-color);
+    border-radius: 0.9rem;
+}
+
+.genreObj-heading{
+    font-size: 1.3rem;
+    font-style:serif;
+    padding: 0.4rem 0.2rem;
+}
+.genreObj-rating{
+    font-size: 1.1rem;
+    font-style: italic;
+    padding: 0.4rem 0.2rem;
+}
+
+.blogobj-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.blog-link {
+    text-decoration: none;
+    color: var(--primary-link);
+    font-size:1.1rem;
+    padding: 0.4rem 0.2rem;
+}
