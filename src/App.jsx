@@ -2,11 +2,19 @@ import { useState } from "react";
 import "./styles/index.css";
 
 const blogs = {
-  space: [
-    { title: "Space Title #1", rating: "3.5", href: "#" },
-    { title: "Space Title #2", rating: "4", href: "#" },
+  web: [
+    {
+      title: "Rust is the future of Javascript Infrastructure",
+      rating: "3.75",
+      href: "https://leerob.io/blog/rust/",
+    },
+    {
+      title: "React is Becoming a Black Box",
+      rating: "4.75",
+      href: "https://jaredpalmer.com/blog/react-is-becoming-a-black-box/",
+    },
   ],
-  economcis: [
+  design: [
     { title: "Economics Title #1", rating: "2.75", href: "#" },
     { title: "Economics Title #2", rating: "4.5", href: "#" },
   ],
@@ -48,10 +56,12 @@ function App() {
       <div className='blog-container'>
         {genreItems.map((genreObj) => {
           return (
-            <div class="current-blog-container">
+            <div class='current-blog-container'>
               <ul className='blogobj-items'>
                 <li className='genreObj-heading'>{genreObj.title}</li>
-                <li className='genreObj-rating'>{genreObj.rating}/5</li>
+                <li className='genreObj-rating'>
+                  <span>{genreObj.rating}/5</span>
+                </li>
                 <li className='genreObj-link'>
                   <a href={genreObj.href} target='_blank' className='blog-link'>
                     Read More
